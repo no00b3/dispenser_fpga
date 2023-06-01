@@ -11,10 +11,10 @@ module dispenser (input clk,
      wire time_up, time_up1;
     
 	 
-	 parameter [2:0] EMPTY = 2'b00;
-	 parameter [2:0] EMPTY_WARMING = 2'b01;
-	 parameter [2:0] FULL_WARMING = 3'b10;
-	 parameter [2:0] FULL_HOT= 3'b11;
+	parameter [1:0] EMPTY = 2'b00;
+	parameter [1:0] EMPTY_WARMING = 2'b01;
+	parameter [1:0] FULL_WARMING = 2'b10;
+	parameter [1:0] FULL_HOT= 2'b11;
 			// additional registers
 
 	always @ (posedge clk or posedge rst)
